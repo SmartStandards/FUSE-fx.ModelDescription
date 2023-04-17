@@ -1,5 +1,5 @@
 {
-  "name": "@kornsw/entityschema",
+  "name": "fusefx-modeldescription",
   "version": "1.1.0",
   "description": "structure to define a entity data model",
   "main": "lib/index.js",
@@ -17,11 +17,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KornSW/EntitySchema"
+    "url": "https://github.com/SmartStandards/FUSE-fx.ModelDescription.git"
   },
   "author": "KornSW",
   "license": "GPL-3.0-only",
-  "homepage": "https://github.com/KornSW/EntitySchema",
+  "homepage": "https://github.com/SmartStandards/FUSE-fx.ModelDescription",
   "devDependencies": {
     "prettier": "^2.6.2",
     "tslint": "^6.1.3",
