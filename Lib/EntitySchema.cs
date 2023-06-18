@@ -5,17 +5,17 @@ namespace System.Data.EntitySchema {
 
   public class EntitySchema {
 
-    public string Name = "";
-    public string NamePlural = "";
-    public string InheritedEntityName = null;
-    public string Summary = "";
+    public string Name { get; set; } = "";
+    public string NamePlural { get; set; } = "";
+    public string InheritedEntityName { get; set; } = null;
+    public string Summary { get; set; } = "";
 
-    public bool IsBlEntrypoint = false;
+    public bool IsBlEntrypoint { get; set; } = false;
 
-    public string PrimaryKeyIndexName = "";
-    public IndexSchema[] Indices = { };
+    public string PrimaryKeyIndexName { get; set; } = "";
+    public IndexSchema[] Indices { get; set; } = { };
 
-    public FieldSchema[] Fields = { };
+    public FieldSchema[] Fields { get; set; } = { };
 
   }
 

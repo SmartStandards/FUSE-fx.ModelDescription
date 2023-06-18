@@ -5,14 +5,14 @@ namespace System.Data.EntitySchema {
 
   public class SchemaRoot {
 
-    public string DescriptionFormat = "";
+    public string DescriptionFormat { get; set; } = "";
 
-    public string TimestampUtc = "";
-    public string SemanticVersion = "";
+    public string TimestampUtc { get; set; } = "";
+    public string SemanticVersion { get; set; } = "";
 
-    public EntitySchema[] Entities = { };
+    public EntitySchema[] Entities { get; set; } = { };
 
-    public RelationSchema[] Relations = { };
+    public RelationSchema[] Relations { get; set; } = { };
 
   }
 
