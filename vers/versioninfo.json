@@ -1,13 +1,13 @@
 {
-  "currentVersion": "1.0.0",
-  "currentVersionWithSuffix": "1.0.0",
+  "currentVersion": "2.0.0",
+  "currentVersionWithSuffix": "2.0.0",
   "releaseType": "official",
-  "previousVersion": "0.0.0",
-  "changeGrade": "patch",
-  "currentMajor": 1,
+  "previousVersion": "1.1.0",
+  "changeGrade": "major",
+  "currentMajor": 2,
   "currentMinor": 0,
   "currentPatch": 0,
-  "versionDateInfo": "2023-05-24",
-  "versionTimeInfo": "13:04:54",
-  "versionNotes": "- moved from private repo (**MVP** state already reached)\n"
+  "versionDateInfo": "2023-06-20",
+  "versionTimeInfo": "10:02:30",
+  "versionNotes": "- breaking Change: renamed from 'EntitySchema' to 'ModelDescription'\n- added auto-Versioning\n- reorganized project structure\n"
 }

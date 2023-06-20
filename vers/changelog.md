@@ -12,9 +12,15 @@ This files contains a version history including all changes relevant for semanti
 
 ## Upcoming Changes
 
-* **breaking Change**: renamed from 'EntitySchema' to 'ModelDescription'
-* reorganized project structure
-* added auto-Versioning
+*(none)*
+
+
+
+## v 2.0.0
+released **2023-06-20**, including:
+ - **breaking Change**: renamed from 'EntitySchema' to 'ModelDescription'
+ - added auto-Versioning
+ - reorganized project structure
 
 
 
