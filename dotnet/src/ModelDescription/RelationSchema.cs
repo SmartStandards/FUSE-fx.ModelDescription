@@ -8,22 +8,22 @@ namespace System.Data.ModelDescription {
   /// </summary>
   public class RelationSchema {
 
-    public string Name = "";
+    public string Name { get; set; } = "";
 
-    public string PrimaryEntityName = "";
-    public string ForeignEntityName = "";
-    public string ForeignKeyIndexName = "";
+    public string PrimaryEntityName { get; set; } = "";
+    public string ForeignEntityName { get; set; } = "";
+    public string ForeignKeyIndexName { get; set; } = "";
 
-    public bool IsLookupRelation = true;
-    public bool PrimaryEntityIsOptional = false;
-    public bool ForeignEntityIsMultiple = true;
+    public bool IsLookupRelation { get; set; } = true;
+    public bool PrimaryEntityIsOptional { get; set; } = false;
+    public bool ForeignEntityIsMultiple { get; set; } = true;
 
-    public string PrimaryNavigationName = "";
-    public string ForeignNavigationName = "";
-    public string PrimaryNavigationSummary = "";
-    public string ForeignNavigationSummary = "";
+    public string PrimaryNavigationName { get; set; } = "";
+    public string ForeignNavigationName { get; set; } = "";
+    public string PrimaryNavigationSummary { get; set; } = "";
+    public string ForeignNavigationSummary { get; set; } = "";
 
-    public bool CascadeDelete = false;
+    public bool CascadeDelete { get; set; } = false;
 
   }
 
