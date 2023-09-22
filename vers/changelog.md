@@ -16,6 +16,12 @@ This files contains a version history including all changes relevant for semanti
 
 
 
+## v 2.0.2
+released **2023-09-22**, including:
+ - new revision without significant changes
+
+
+
 ## v 2.0.1
 released **2023-09-22**, including:
  - fixed casing EntitySchema.primaryKeyIndexName
