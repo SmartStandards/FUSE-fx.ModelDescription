@@ -13,7 +13,7 @@ export class EntitySchema {
 
   public isBlEntrypoint: boolean = false;
 
-  public PrimaryKeyIndexName: string = '';
+  public primaryKeyIndexName: string = '';
   public indices: IndexSchema[] = [];
 
   public fields: FieldSchema[] = [];
