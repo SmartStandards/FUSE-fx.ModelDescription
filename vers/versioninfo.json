@@ -1,13 +1,13 @@
 {
-  "currentVersion": "2.0.0",
-  "currentVersionWithSuffix": "2.0.0",
+  "currentVersion": "2.0.1",
+  "currentVersionWithSuffix": "2.0.1",
   "releaseType": "official",
-  "previousVersion": "1.1.0",
-  "changeGrade": "major",
+  "previousVersion": "2.0.0",
+  "changeGrade": "patch",
   "currentMajor": 2,
   "currentMinor": 0,
-  "currentPatch": 0,
-  "versionDateInfo": "2023-06-20",
-  "versionTimeInfo": "10:02:30",
-  "versionNotes": "- breaking Change: renamed from 'EntitySchema' to 'ModelDescription'\n- added auto-Versioning\n- reorganized project structure\n"
+  "currentPatch": 1,
+  "versionDateInfo": "2023-09-22",
+  "versionTimeInfo": "09:59:55",
+  "versionNotes": "- fixed casing EntitySchema.primaryKeyIndexName\n"
 }

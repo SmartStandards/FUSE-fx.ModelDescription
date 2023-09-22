@@ -12,7 +12,13 @@ This files contains a version history including all changes relevant for semanti
 
 ## Upcoming Changes
 
-* fixed casing EntitySchema.primaryKeyIndexName
+*(none)*
+
+
+
+## v 2.0.1
+released **2023-09-22**, including:
+ - fixed casing EntitySchema.primaryKeyIndexName
 
 
 
