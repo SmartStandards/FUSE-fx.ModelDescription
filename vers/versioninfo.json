@@ -1,13 +1,13 @@
 {
-  "currentVersion": "2.0.2",
-  "currentVersionWithSuffix": "2.0.2",
+  "currentVersion": "2.0.3",
+  "currentVersionWithSuffix": "2.0.3",
   "releaseType": "official",
-  "previousVersion": "2.0.1",
+  "previousVersion": "2.0.2",
   "changeGrade": "patch",
   "currentMajor": 2,
   "currentMinor": 0,
-  "currentPatch": 2,
-  "versionDateInfo": "2023-09-22",
-  "versionTimeInfo": "10:28:35",
+  "currentPatch": 3,
+  "versionDateInfo": "2023-10-06",
+  "versionTimeInfo": "15:50:49",
   "versionNotes": "- new revision without significant changes\n"
 }
