@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-
+﻿
 namespace System.Data.ModelDescription {
 
   /// <summary>

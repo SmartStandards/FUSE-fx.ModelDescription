@@ -9,10 +9,14 @@
     <Import_RootNamespace>System</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)convenience\SchemaExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EntitySchema.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FieldSchema.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IndexSchema.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RelationSchema.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SchemaRoot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Convenience\" />
   </ItemGroup>
 </Project>
