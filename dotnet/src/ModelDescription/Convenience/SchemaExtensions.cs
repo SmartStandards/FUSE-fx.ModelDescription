@@ -8,7 +8,12 @@ namespace System.Data.ModelDescription.Convenience {
   public static class SchemaExtensions {
 
     public static EntitySchema GetSchema(this SchemaRoot schemaRoot, string schemaName) {
-      return schemaRoot.Entities.FirstOrDefault((e) => e.Name == schemaName);
+      if (schemaName.EndsWith("Entity")) {
+        schemaName = schemaName.Replace("Entity", "");
+      }
+      return schemaRoot.Entities.FirstOrDefault(
+        (e) => e.Name == schemaName 
+      );
     }
 
     public static IndexSchema GetIndex(this EntitySchema schema, string indexName) {
@@ -21,7 +26,7 @@ namespace System.Data.ModelDescription.Convenience {
       return GetIndex(schema, schema.PrimaryKeyIndexName);
     }
 
-    public static List<IndexSchema> GetUniqueKeysets(this SchemaRoot schemaRoot, string schemaName) {      
+    public static List<IndexSchema> GetUniqueKeysets(this SchemaRoot schemaRoot, string schemaName) {
       EntitySchema schema = GetSchema(schemaRoot, schemaName);
       List<IndexSchema> result = schema.Indices.Where((i) => i.Unique).ToList();
       return result;
@@ -42,7 +47,7 @@ namespace System.Data.ModelDescription.Convenience {
       return primaryIndex.GetProperties(t);
     }
 
-    public static List<List<PropertyInfo>> GetUniqueKeysetsProperties(this SchemaRoot schemaRoot,  Type t) {
+    public static List<List<PropertyInfo>> GetUniqueKeysetsProperties(this SchemaRoot schemaRoot, Type t) {
       List<List<PropertyInfo>> result = new List<List<PropertyInfo>>();
       List<IndexSchema> keySets = schemaRoot.GetUniqueKeysets(t.Name);
       foreach (IndexSchema keySet in keySets) {
