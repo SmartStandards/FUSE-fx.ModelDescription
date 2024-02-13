@@ -12,17 +12,29 @@ namespace System.Data.ModelDescription.Convenience {
         schemaName = schemaName.Replace("Entity", "");
       }
       return schemaRoot.Entities.FirstOrDefault(
-        (e) => e.Name == schemaName 
+        (e) => e.Name == schemaName
       );
     }
 
     public static IndexSchema GetIndex(this EntitySchema schema, string indexName) {
       IndexSchema index = schema.Indices.FirstOrDefault((i) => i.Name == indexName);
+      if (index == null) { 
+        return new IndexSchema() { 
+          MemberFieldNames = new string[] { }, Unique = false, Name = "Empty_Default" 
+        }; 
+      }
       return index;
     }
 
     public static IndexSchema GetPrimaryIndex(this SchemaRoot schemaRoot, string schemaName) {
       EntitySchema schema = GetSchema(schemaRoot, schemaName);
+      if (string.IsNullOrEmpty(schema.PrimaryKeyIndexName)) {
+        return new IndexSchema() {
+          Name = "Id_Default",
+          Unique = true,
+          MemberFieldNames = new string[] { "Id" }
+        };
+      }
       return GetIndex(schema, schema.PrimaryKeyIndexName);
     }
 
