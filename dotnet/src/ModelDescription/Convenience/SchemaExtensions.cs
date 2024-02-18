@@ -18,10 +18,12 @@ namespace System.Data.ModelDescription.Convenience {
 
     public static IndexSchema GetIndex(this EntitySchema schema, string indexName) {
       IndexSchema index = schema.Indices.FirstOrDefault((i) => i.Name == indexName);
-      if (index == null) { 
-        return new IndexSchema() { 
-          MemberFieldNames = new string[] { }, Unique = false, Name = "Empty_Default" 
-        }; 
+      if (index == null) {
+        return new IndexSchema() {
+          MemberFieldNames = new string[] { },
+          Unique = false,
+          Name = "Empty_Default"
+        };
       }
       return index;
     }
@@ -67,6 +69,24 @@ namespace System.Data.ModelDescription.Convenience {
       }
       return result;
     }
+
+    public static bool IsForeignKey(this SchemaRoot schemaRoot, PropertyInfo propertyInfo) {
+      foreach (RelationSchema relation in schemaRoot.Relations) {
+        if (relation.ForeignKeyIndexName == propertyInfo.Name) return true;
+      }
+      return false;
+    }
+
+    public static bool IsNavigation(this SchemaRoot schemaRoot, PropertyInfo propertyInfo) {
+      foreach (RelationSchema relation in schemaRoot.Relations) {
+        if (
+          relation.ForeignNavigationName == propertyInfo.Name ||
+          relation.PrimaryNavigationName == propertyInfo.Name
+        ) return true;
+      }
+      return false;
+    }
+
   }
 
 }
