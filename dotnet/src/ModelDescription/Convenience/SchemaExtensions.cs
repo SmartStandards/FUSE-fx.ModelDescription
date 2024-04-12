@@ -7,10 +7,7 @@ namespace System.Data.ModelDescription.Convenience {
 
   public static class SchemaExtensions {
 
-    public static EntitySchema GetSchema(this SchemaRoot schemaRoot, string schemaName) {
-      if (schemaName.EndsWith("Entity")) {
-        schemaName = schemaName.Replace("Entity", "");
-      }
+    public static EntitySchema GetSchema(this SchemaRoot schemaRoot, string schemaName) {      
       return schemaRoot.Entities.FirstOrDefault(
         (e) => e.Name == schemaName
       );
