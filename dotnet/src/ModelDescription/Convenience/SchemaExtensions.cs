@@ -25,9 +25,17 @@ namespace System.Data.ModelDescription.Convenience {
       return index;
     }
 
-    public static IndexSchema GetPrimaryIndex(this SchemaRoot schemaRoot, string schemaName) {
-      EntitySchema schema = GetSchema(schemaRoot, schemaName);
+    public static IndexSchema GetPrimaryIndex(this SchemaRoot schemaRoot, Type entityType) {
+      EntitySchema schema = GetSchema(schemaRoot, entityType.Name);
       if (string.IsNullOrEmpty(schema.PrimaryKeyIndexName)) {
+        PropertyInfo primaryKeyProperty = TryGetPrimaryKeyProperty(entityType);
+        if (primaryKeyProperty != null) {
+          return new IndexSchema() {
+            Name = $"{primaryKeyProperty.Name}_Default",
+            Unique = true,
+            MemberFieldNames = new string[] { primaryKeyProperty.Name }
+          };
+        }
         return new IndexSchema() {
           Name = "Id_Default",
           Unique = true,
@@ -35,6 +43,24 @@ namespace System.Data.ModelDescription.Convenience {
         };
       }
       return GetIndex(schema, schema.PrimaryKeyIndexName);
+    }
+
+    private static PropertyInfo TryGetPrimaryKeyProperty(Type t) {
+      if (t.GetProperty("Id") != null) return t.GetProperty("Id");
+      if (t.GetProperty("UId") != null) return t.GetProperty("UId");
+      if (t.GetProperty("Uid") != null) return t.GetProperty("Uid");
+      if (t.GetProperty($"{t.Name}+Id") != null) return t.GetProperty($"{t.Name}+Id");
+      if (t.GetProperty($"{t.Name}+UId") != null) return t.GetProperty($"{t.Name}+UId");
+      if (t.GetProperty($"{t.Name}+Uid") != null) return t.GetProperty($"{t.Name}+Uid");
+      if (t.Name.EndsWith("Entity")) {
+        string idName = t.Name.Substring(0, t.Name.Length - 6) + "Id";
+        if (t.GetProperty(idName) != null) return t.GetProperty(idName);
+        string uidName = t.Name.Substring(0, t.Name.Length - 6) + "UId";
+        if (t.GetProperty(uidName) != null) return t.GetProperty(uidName);
+        string uIdName = t.Name.Substring(0, t.Name.Length - 6) + "Uid";
+        if (t.GetProperty(uIdName) != null) return t.GetProperty(uIdName);
+      }
+      return null;
     }
 
     public static List<IndexSchema> GetUniqueKeysets(this SchemaRoot schemaRoot, string schemaName) {
@@ -54,7 +80,7 @@ namespace System.Data.ModelDescription.Convenience {
     }
 
     public static List<PropertyInfo> GetPrimaryKeyProperties(this SchemaRoot schemaRoot, Type t) {
-      IndexSchema primaryIndex = schemaRoot.GetPrimaryIndex(t.Name);
+      IndexSchema primaryIndex = schemaRoot.GetPrimaryIndex(t);
       return primaryIndex.GetProperties(t);
     }
 
