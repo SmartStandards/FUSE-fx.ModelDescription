@@ -1,8 +1,34 @@
-
 /**
  * (from 'FUSE-fx.ModelDescription')
  */
 export class FieldSchema {
+  constructor(
+    name: string,
+    type: string,
+    maxLength?: number,
+    summary?: string,
+    required?: boolean,
+    defaultValue?: string,
+    dbGeneratedIdentity?: boolean,
+    setabilityFlags?: number,
+    contentConcern?: string,
+    identityLabel?: boolean,
+    filterable?: number,
+    systemInternal?: boolean,
+  ) {
+    this.name = name;
+    this.type = type;
+    this.maxLength = maxLength || 0;
+    this.summary = summary || '';
+    this.required = required || true;
+    this.defaultValue = defaultValue || '';
+    this.dbGeneratedIdentity = dbGeneratedIdentity || false;
+    this.setabilityFlags = setabilityFlags || 7;
+    this.contentConcern = contentConcern || '';
+    this.identityLabel = identityLabel || false;
+    this.filterable = filterable || 0;
+    this.systemInternal = systemInternal || false;
+  }
 
   public name: string = '';
   public type: string = '';
@@ -11,7 +37,7 @@ export class FieldSchema {
   public summary: string = '';
 
   public required: boolean = true;
-  public defaultValue: string|null = null;
+  public defaultValue: string | null = null;
   public dbGeneratedIdentity: boolean = false;
 
   /**
@@ -21,7 +47,7 @@ export class FieldSchema {
    * OnBatchUpdate = 4 (this field should be setable during a batch-update for multiple records),
    * AfterCreation = 6 (represents the logical combination of 'OnSingleUpdate' + 'OnBatchUpdate'),
    * Always = 7 (represents the logical combination of 'OnCreation' + 'AfterCreation')
-  */
+   */
   public setabilityFlags: number = 7;
 
   /**
@@ -29,7 +55,7 @@ export class FieldSchema {
    * This can be used to control the detail-grade (displayed fields) in the UI
    * or when exporting data in an abstract way.
    */
-  public contentConcern: string|null = null;
+  public contentConcern: string | null = null;
 
   /**
    * Defines, that a Property contains content, which represents a human readable natural
@@ -46,5 +72,4 @@ export class FieldSchema {
   public filterable: number = 0;
 
   public systemInternal: boolean = false;
-
 }
