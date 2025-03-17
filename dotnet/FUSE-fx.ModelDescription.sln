@@ -26,6 +26,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelDescription.net6.0", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelDescription.net461", "src\ModelDescription.net461\ModelDescription.net461.csproj", "{B0BA06FE-6437-4B9E-8C76-3ADFC8D191D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelDescription.net48", "src\ModelDescription.net48\ModelDescription.net48.csproj", "{54D19637-3DBA-4D8F-B654-E2F9A58D167C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelDescription.net8.0", "src\ModelDescription.net8.0\ModelDescription.net8.0.csproj", "{5D02EFAB-B12F-4BAE-B974-0EB9FE2A9BA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,12 @@ Global
 		{B0BA06FE-6437-4B9E-8C76-3ADFC8D191D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0BA06FE-6437-4B9E-8C76-3ADFC8D191D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0BA06FE-6437-4B9E-8C76-3ADFC8D191D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D19637-3DBA-4D8F-B654-E2F9A58D167C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D19637-3DBA-4D8F-B654-E2F9A58D167C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D19637-3DBA-4D8F-B654-E2F9A58D167C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D19637-3DBA-4D8F-B654-E2F9A58D167C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D02EFAB-B12F-4BAE-B974-0EB9FE2A9BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D02EFAB-B12F-4BAE-B974-0EB9FE2A9BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,11 +64,15 @@ Global
 		{88F15535-FAD8-4372-80DC-FD0D8C81AB4C} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
 		{7B5BAEA8-7E79-4A30-B6C1-4DA4831AF970} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
 		{B0BA06FE-6437-4B9E-8C76-3ADFC8D191D2} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
+		{54D19637-3DBA-4D8F-B654-E2F9A58D167C} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
+		{5D02EFAB-B12F-4BAE-B974-0EB9FE2A9BA8} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2F37C1D-32F0-4BF2-AAEB-46B9D8C07D23}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\ModelDescription\ModelDescription.projitems*{54d19637-3dba-4d8f-b654-e2f9a58d167c}*SharedItemsImports = 4
+		src\ModelDescription\ModelDescription.projitems*{5d02efab-b12f-4bae-b974-0eb9fe2a9ba8}*SharedItemsImports = 5
 		src\ModelDescription\ModelDescription.projitems*{7b5baea8-7e79-4a30-b6c1-4da4831af970}*SharedItemsImports = 5
 		src\ModelDescription\ModelDescription.projitems*{88f15535-fad8-4372-80dc-fd0d8c81ab4c}*SharedItemsImports = 5
 		src\ModelDescription\ModelDescription.projitems*{b0ba06fe-6437-4b9e-8c76-3adfc8d191d2}*SharedItemsImports = 4

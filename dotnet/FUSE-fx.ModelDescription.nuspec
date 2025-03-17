@@ -17,9 +17,13 @@
     <dependencies>
       <group targetFramework=".NETFramework4.6">   
       </group>
+      <group targetFramework=".NETFramework4.8">
+      </group>
       <group targetFramework="net5.0">    
       </group>
       <group targetFramework="net6.0">
+      </group>
+      <group targetFramework="net8.0">
       </group>
     </dependencies>
   </metadata>
@@ -38,5 +42,9 @@
     <file src="dist\bin-net6.0\FUSE-fx.ModelDescription.dll" target="lib/net6.0" />
     <file src="dist\bin-net6.0\FUSE-fx.ModelDescription.xml" target="lib/net6.0" />
     <file src="dist\bin-net6.0\FUSE-fx.ModelDescription.pdb" target="lib/net6.0" />
+    <!-- .NET 8.0 -->
+    <!--<file src="dist\bin-net8.0\FUSE-fx.ModelDescription.dll" target="lib/net8.0" />
+    <file src="dist\bin-net8.0\FUSE-fx.ModelDescription.xml" target="lib/net8.0" />
+    <file src="dist\bin-net8.0\FUSE-fx.ModelDescription.pdb" target="lib/net8.0" />-->
   </files>
 </package>
