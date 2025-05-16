@@ -69,6 +69,16 @@ namespace System.Data.ModelDescription.Convenience {
       return result;
     }
 
+    public static List<PropertyInfo> GetIndexProperties<TEntity>(this SchemaRoot schemaRoot, string indexName) {
+      return schemaRoot.GetIndexProperties(indexName, typeof(TEntity));
+    }
+
+    public static List<PropertyInfo> GetIndexProperties(this SchemaRoot schemaRoot, string indexName, Type t) {
+      EntitySchema schema = GetSchema(schemaRoot, t.Name);
+      IndexSchema index = GetIndex(schema, indexName);
+      return index.GetProperties(t);
+    }
+
     public static List<PropertyInfo> GetProperties(this IndexSchema indexSchema, Type t) {
       var result = new List<PropertyInfo>();
       foreach (string fieldName in indexSchema.MemberFieldNames) {
