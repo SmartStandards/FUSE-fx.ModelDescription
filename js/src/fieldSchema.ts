@@ -72,4 +72,6 @@ export class FieldSchema {
   public filterable: number = 0;
 
   public systemInternal: boolean = false;
+
+  public knownValueRangeName: string | null = null;
 }

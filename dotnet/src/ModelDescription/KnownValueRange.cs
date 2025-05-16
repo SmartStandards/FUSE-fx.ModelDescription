@@ -1,6 +1,6 @@
 ﻿namespace System.Data.ModelDescription {
   public class KnownValueRange {
-    public KnownValue[] KnownValues { get; set; }
+    public KnownValue[] KnownValues { get; set; } = { };
 
     /// <summary>
     /// Full Typename of enums

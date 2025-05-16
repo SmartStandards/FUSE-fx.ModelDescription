@@ -1,4 +1,5 @@
 import { EntitySchema } from './entitySchema';
+import { KnownValueRange } from './knownValueRange';
 import { RelationSchema } from './relationSchema';
 
 /**
@@ -16,4 +17,6 @@ export class SchemaRoot {
   public relations: RelationSchema[] = [];
 
   public designerData: string = '';
+
+  public knownValues: KnownValueRange[] = [];
 }
