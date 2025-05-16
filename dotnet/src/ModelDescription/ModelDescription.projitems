@@ -9,7 +9,8 @@
     <Import_RootNamespace>System</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)AllowedValueSchema.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)KnownValueRange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)KnownValue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)convenience\SchemaExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EntitySchema.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FieldSchema.cs" />

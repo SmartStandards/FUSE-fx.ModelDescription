@@ -51,7 +51,7 @@ namespace System.Data.ModelDescription {
 
     public bool SystemInternal { get; set; } = false;
 
-    public AllowedValueSchema[] AllowedValues { get; set; } = null;
+    public string KnownValueRangeName { get; set; } = null;
 
     [Obsolete("use value 1 for the 'SetabilityFlags' to protect this field from being changed afterwards...")]
     public bool FixedAfterCreation { get; set; } = false;
