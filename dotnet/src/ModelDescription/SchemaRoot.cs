@@ -18,7 +18,7 @@ namespace System.Data.ModelDescription {
 
     public RelationSchema[] Relations { get; set; } = { };
 
-    public KnownValueRange[] KnownValues { get; set; } = { };
+    public KnownValueRange[] KnownValueRanges { get; set; } = { };
 
     public string DesignerData { get; set; } = "";
   }
