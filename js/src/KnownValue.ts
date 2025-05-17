@@ -1,4 +1,4 @@
 export class KnownValue {
-  public ValueSerialized: string = '';
-  public Label: string = '';
+  public valueSerialized: string = '';
+  public label: string = '';
 }
