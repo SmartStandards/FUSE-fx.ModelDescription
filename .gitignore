@@ -244,7 +244,9 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-/(Vendor)/NuGet/
 Lib_JS/entityschema-*.tgz
 Lib_JS/lib/*
-/dotnet/dist
+
+**/dotnet/dist
+**/vendor/nuget/
+
