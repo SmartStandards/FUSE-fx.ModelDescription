@@ -1,6 +1,6 @@
 {
   "name": "fusefx-modeldescription",
-  "version": "999.0.0",
+  "version": "2.0.22",
   "description": "FUSE (Framework for Unified Storage and Entity) - classes (DOM) to describe a entity model",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
