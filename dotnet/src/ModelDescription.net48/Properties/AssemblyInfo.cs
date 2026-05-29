@@ -3,9 +3,9 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("UID64")]
-[assembly: AssemblyDescription("a 44-Bit Timestamp with some random salt")]
-[assembly: AssemblyProduct("UID64")]
+[assembly: AssemblyTitle("FUSE-fx.ModelDescription")]
+[assembly: AssemblyDescription("FUSE (Framework for Unified Storage and Entity) - classes (DOM) to describe a entity model")]
+[assembly: AssemblyProduct("FUSE-fx")]
 
 [assembly: AssemblyCompany("(public domain)")]
 [assembly: AssemblyCopyright("SmartStandards")]

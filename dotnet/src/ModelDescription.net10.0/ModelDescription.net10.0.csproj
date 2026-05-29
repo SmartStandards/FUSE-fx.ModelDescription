@@ -8,16 +8,16 @@
   </PropertyGroup>
   
   <PropertyGroup>
-    <PackageId>UID64</PackageId>
-    <Description>a 44-Bit Timestamp with some random salt</Description>
-    <Product>UID64</Product>
+    <PackageId>FUSE-fx.ModelDescription</PackageId>
+    <Description>FUSE (Framework for Unified Storage and Entity) - classes (DOM) to describe a entity model</Description>
+    <Product>FUSE-fx</Product>
     <Company>(public domain)</Company>
     <Copyright>SmartStandards</Copyright>
     <Version>2.0.22</Version>
     <AssemblyVersion>2.0.22</AssemblyVersion>
     <Authors>SmartStandards</Authors>
     <FileVersion>2.0.22</FileVersion>
-    <PackageTags>UID64 Salted Timestamp UUID BigInt Long</PackageTags>
+    <PackageTags>EntitySchema</PackageTags>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
