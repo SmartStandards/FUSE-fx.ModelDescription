@@ -1,13 +1,13 @@
 {
-  "currentVersion": "2.0.22",
-  "currentVersionWithSuffix": "2.0.22",
+  "currentVersion": "2.1.0",
+  "currentVersionWithSuffix": "2.1.0",
   "releaseType": "",
-  "previousVersion": "2.0.21",
-  "changeGrade": "fix",
+  "previousVersion": "2.0.22",
+  "changeGrade": "minor",
   "currentMajor": 2,
-  "currentMinor": 0,
-  "currentPatch": 22,
-  "versionDateInfo": "2025-06-03",
-  "versionTimeInfo": "10:10:10",
-  "versionNotes": "- Removed .NET 46 and enabled .NET 8 Target\n"
+  "currentMinor": 1,
+  "currentPatch": 0,
+  "versionDateInfo": "2026-05-29",
+  "versionTimeInfo": "09:21:57",
+  "versionNotes": "- new Feature: Moved targets from .net 6/8 to 8/10\n"
 }

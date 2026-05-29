@@ -13,10 +13,10 @@
     <Product>FUSE-fx</Product>
     <Company>(public domain)</Company>
     <Copyright>SmartStandards</Copyright>
-    <Version>2.0.22</Version>
-    <AssemblyVersion>2.0.22</AssemblyVersion>
+    <Version>2.1.0</Version>
+    <AssemblyVersion>2.1.0</AssemblyVersion>
     <Authors>SmartStandards</Authors>
-    <FileVersion>2.0.22</FileVersion>
+    <FileVersion>2.1.0</FileVersion>
     <PackageTags>EntitySchema</PackageTags>
   </PropertyGroup>
   
